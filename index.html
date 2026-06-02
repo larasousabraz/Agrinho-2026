@@ -13,6 +13,7 @@
 </head>
 <body>
     <header class="cabecalho">
+        <button id="btn-toggle-tema" class="theme-toggle" type="button">Tema Escuro</button>
         <h1>Agro Forte, Futuro Sustentável</h1>
         <p>Simulador de Equilíbrio Ecológico na Produção Agrícola</p>
     </header>
@@ -142,9 +143,16 @@
                 <p>Depende do tamanho e do consumo, mas em muitas propriedades o retorno vem em poucos anos.</p>
             </details>
             <details>
-                <summary>Onde obter mudas nativas?</summary>
+                <summary>Onde podemos obter mudas nativas?</summary>
                 <p>Procure viveiros locais e programas de conservação do seu estado.</p>
             </details>
+        </section>
+
+        <section class="comentario-area">
+            <h2>Deixe seu Comentário</h2>
+            <textarea id="comentario" placeholder="Escreva seu comentário sobre agricultura sustentável..."></textarea>
+            <button id="btn-enviar-comentario" class="btn btn-comentario" type="button">Enviar Comentário</button>
+            <p id="mensagem-comentario" class="mensagem-comentario" aria-live="polite"></p>
         </section>
 
     </main>

@@ -2,10 +2,29 @@
 :root {
     --cor-primaria: #26a388; /* Verde Agro */
     --cor-secundaria: #1565c0; /* Azul Sustentável */
-    --cor-fundo: #81a55d;
+    --cor-fundo: #e8f5e9;
+    --cor-secundaria-clara: #cfe8ce;
+    --cor-secao: #c8ee97;
+    --cor-card: #f8faf6;
     --cor-texto: #2c3e50;
+    --cor-texto-secundario: #3b4d42;
     --cor-alerta: #d32f2f;
     --cor-sucesso: #2e7d32;
+    --cor-rodape: #1e272e;
+    --cor-borda: #82b186;
+}
+
+body.dark-theme {
+    --cor-fundo: #111417;
+    --cor-secao: #1f272f;
+    --cor-card: #1a2229;
+    --cor-texto: #e8f1f5;
+    --cor-texto-secundario: #a9bac5;
+    --cor-primaria: #80d8ff;
+    --cor-secundaria: #82b1ff;
+    --cor-secundaria-clara: #263238;
+    --cor-rodape: #090b0f;
+    --cor-borda: #3e5f7b;
 }
 
 * {
@@ -20,10 +39,12 @@ body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
+    transition: background-color 0.35s ease, color 0.35s ease;
 }
 
 /* Cabeçalho com Imagem de Fundo (Agro Sustentável) */
 .cabecalho {
+    position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                       url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1600&q=80&auto=format&fit=crop');
     background-size: cover;
@@ -31,6 +52,26 @@ body {
     color: #e2d628;
     text-align: center;
     padding: 5rem 1rem; /* Aumentado para destacar a imagem */
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 1px solid rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.15);
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-1px);
+    background: rgba(255,255,255,0.25);
 }
 
 .cabecalho h1 {
@@ -91,11 +132,12 @@ body {
 }
 
 section {
-    background: #c8ee97;
+    background: var(--cor-secao);
     margin-bottom: 1.5rem;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 h2 {
@@ -134,11 +176,11 @@ h2:hover::after {
 }
 
 .card-status {
-    background-color: #f8faf6;
+    background-color: var(--cor-card);
     padding: 1.6rem;
     border-radius: 12px;
     text-align: center;
-    border: 1px solid #82b186;
+    border: 1px solid var(--cor-borda);
     min-height: 120px;
 }
 
@@ -288,7 +330,7 @@ section {
 }
 
 .artigo-card {
-    background: #ffffff;
+    background: var(--cor-card);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
@@ -300,14 +342,14 @@ section {
 }
 
 .recurso-item {
-    background: #ffffff;
+    background: var(--cor-card);
     padding: 1rem;
     border-radius: 8px;
     border-left: 4px solid var(--cor-primaria);
 }
 
 .depoimentos .depoimento {
-    background: #ffffff;
+    background: var(--cor-card);
     padding: 1.2rem;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -323,8 +365,40 @@ section {
 .rodape {
     text-align: center;
     padding: 2rem;
-    background-color: #1e272e;
+    background-color: var(--cor-rodape);
     color: #ffffff;
     font-size: 0.9rem;
     margin-top: 4rem;
+}
+
+.comentario-area textarea {
+    width: 100%;
+    min-height: 140px;
+    resize: vertical;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.12);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background: var(--cor-card);
+    color: var(--cor-texto);
+    margin-top: 1rem;
+}
+
+.btn-comentario {
+    margin-top: 1rem;
+    width: auto;
+}
+
+.mensagem-comentario {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.mensagem-comentario.alerta {
+    color: var(--cor-alerta);
+}
+
+.mensagem-comentario.sucesso {
+    color: var(--cor-sucesso);
 }
