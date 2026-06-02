@@ -1,0 +1,140 @@
+/* Configurações Gerais e Cores Base */
+:root {
+    --cor-primaria: #2e7d32; /* Verde Agro */
+    --cor-secundaria: #1565c0; /* Azul Sustentável */
+    --cor-fundo: #f1f8e9;
+    --cor-texto: #333333;
+    --cor-alerta: #c62828;
+    --cor-sucesso: #2e7d32;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.cabecalho h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Conteúdo Principal e Grid de Status */
+.conteudo-principal {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: #ffffff;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--cor-fundo);
+    padding-bottom: 0.5rem;
+}
+
+/* Indicadores */
+.indicadores {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-status {
+    background-color: var(--cor-fundo);
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.card-status p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.alerta { color: var(--cor-alerta); }
+.sucesso { color: var(--cor-sucesso); }
+
+/* Botões Interativos */
+.botoes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0d47a1;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsividade (Essencial para Nível 4) */
+@media (min-width: 600px) {
+    .indicadores {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .card-status {
+        flex: 1;
+    }
+
+    .botoes-container {
+        flex-direction: row;
+    }
+
+    .btn {
+        flex: 1;
+    }
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
