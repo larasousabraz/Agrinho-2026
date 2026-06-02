@@ -1,11 +1,11 @@
 /* Configurações Gerais e Cores Base */
 :root {
-    --cor-primaria: #144e17; /* Verde Agro */
-    --cor-secundaria: #cbeeec; /* Azul Sustentável */
-    --cor-fundo: #f1f8e9;
-    --cor-texto: #072213;
-    --cor-alerta: #792626;
-    --cor-sucesso: #2cc934;
+    --cor-primaria: #2e7d32; /* Verde Agro */
+    --cor-secundaria: #1565c0; /* Azul Sustentável */
+    --cor-fundo: #81a55d;
+    --cor-texto: #2c3e50;
+    --cor-alerta: #d32f2f;
+    --cor-sucesso: #2e7d32;
 }
 
 * {
@@ -15,44 +15,59 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Aplicação da nova fonte alterada */
+    font-family: 'Poppins', sans-serif;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* Cabeçalho com Imagem de Fundo (Agro Sustentável) */
 .cabecalho {
-    background-color: var(--cor-primaria);
-    color: #51ce66;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                      url('https://unsplash.com');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 5rem 1rem; /* Aumentado para destacar a imagem */
 }
 
 .cabecalho h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     margin-bottom: 0.5rem;
+}
+
+.cabecalho p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 /* Conteúdo Principal e Grid de Status */
 .conteudo-principal {
     max-width: 1000px;
-    margin: 2rem auto;
+    margin: -2rem auto 2rem auto; /* Sobe um pouco os cards em cima da imagem */
     padding: 0 1rem;
+    position: relative;
+    z-index: 10;
 }
 
 section {
-    background: #ffffff;
+    background: #fff6d0;
     margin-bottom: 1.5rem;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 h2 {
     color: var(--cor-primaria);
+    font-weight: 600;
     margin-bottom: 1rem;
-    border-bottom: 2px solid var(--cor-fundo);
+    border-bottom: 2px solid #e0e0e0;
     padding-bottom: 0.5rem;
 }
 
@@ -64,15 +79,22 @@ h2 {
 }
 
 .card-status {
-    background-color: var(--cor-fundo);
-    padding: 1rem;
-    border-radius: 6px;
+    background-color: #f8faf6;
+    padding: 1.2rem;
+    border-radius: 8px;
     text-align: center;
+    border: 1px solid #82b186;
+}
+
+.card-status h3 {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 400;
 }
 
 .card-status p {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.6rem;
+    font-weight: 700;
     margin-top: 0.5rem;
 }
 
@@ -84,29 +106,35 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .btn {
     background-color: var(--cor-secundaria);
     color: #ffffff;
     border: none;
-    padding: 1rem;
+    padding: 1.2rem;
     font-size: 1rem;
-    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(21, 101, 192, 0.2);
 }
 
 .btn:hover {
     background-color: #0d47a1;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(21, 101, 192, 0.3);
 }
 
 .btn:disabled {
-    background-color: #bdbdbd;
+    background-color: #cbdfd8;
+    color: #76958b;
     cursor: not-allowed;
     transform: none;
+    box-shadow: none;
 }
 
 /* Responsividade (Essencial para Nível 4) */
@@ -132,9 +160,9 @@ h2 {
 /* Rodapé */
 .rodape {
     text-align: center;
-    padding: 1.5rem;
-    background-color: #333333;
+    padding: 2rem;
+    background-color: #1e272e;
     color: #ffffff;
     font-size: 0.9rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
