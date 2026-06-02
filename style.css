@@ -1,11 +1,11 @@
 /* Configurações Gerais e Cores Base */
 :root {
-    --cor-primaria: #2e7d32; /* Verde Agro */
-    --cor-secundaria: #1565c0; /* Azul Sustentável */
+    --cor-primaria: #144e17; /* Verde Agro */
+    --cor-secundaria: #cbeeec; /* Azul Sustentável */
     --cor-fundo: #f1f8e9;
-    --cor-texto: #333333;
-    --cor-alerta: #c62828;
-    --cor-sucesso: #2e7d32;
+    --cor-texto: #072213;
+    --cor-alerta: #792626;
+    --cor-sucesso: #2cc934;
 }
 
 * {
@@ -24,7 +24,7 @@ body {
 /* Cabeçalho */
 .cabecalho {
     background-color: var(--cor-primaria);
-    color: #ffffff;
+    color: #51ce66;
     text-align: center;
     padding: 2rem 1rem;
 }
