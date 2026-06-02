@@ -5,54 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fazenda Sustentável - Concurso Agrinho 2026</title>
     <!-- Link da nova fonte Google Fonts (Poppins) -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="cabecalho">
         <h1>Agro Forte, Futuro Sustentável</h1>
-        <p>Simulador de Equilíbrio Ecológico na Production</p>
+        <p>Simulador de Equilíbrio Ecológico na Produção Agrícola</p>
     </header>
 
     <main class="conteudo-principal">
-        <!-- Seção do Painel de Status -->
-        <section class="painel-status">
-            <h2>Status da sua Fazenda</h2>
-            <div class="indicadores">
-                <div class="card-status">
-                    <h3>Produção Agrícola</h3>
-                    <p id="txt-producao">10 toneladas</p>
-                </div>
-                <div class="card-status">
-                    <h3>Impacto Ambiental</h3>
-                    <p id="txt-impacto" class="alerta">Alto</p>
-                </div>
-                <div class="card-status">
-                    <h3>Sustentabilidade</h3>
-                    <p id="txt-pontuacao">0%</p>
-                </div>
+        <div class="conteudo-grid">
+            <div class="col-esquerda">
+                <!-- Seção do Painel de Status -->
+                <section class="painel-status">
+                    <h2>Status da sua Fazenda</h2>
+                    <div class="indicadores">
+                        <div class="card-status">
+                            <h3>Produção Agrícola</h3>
+                            <p id="txt-producao">10 toneladas</p>
+                        </div>
+                        <div class="card-status">
+                            <h3>Impacto Ambiental</h3>
+                            <p id="txt-impacto" class="alerta">Alto</p>
+                        </div>
+                        <div class="card-status">
+                            <h3>Sustentabilidade</h3>
+                            <p id="txt-pontuacao">0%</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção de Ações Interativas -->
+                <section class="acoes">
+                    <h2>Adote Práticas Sustentáveis</h2>
+                    <p>Clique nos botões abaixo para equilibrar sua produção com o meio ambiente:</p>
+                    <div class="botoes-container">
+                        <button id="btn-reflorestar" class="btn">Plantar Árvores Nativas</button>
+                        <button id="btn-gotejamento" class="btn">Instalar Irrigação por Gotejamento</button>
+                        <button id="btn-solar" class="btn">Usar Energia Solar</button>
+                    </div>
+                </section>
+
+                <!-- Seção Informativa Obrigatória para o Tema -->
+                <section class="sobre-tema">
+                    <h2>O Equilíbrio é o Caminho</h2>
+                    <p>O ecossistema agrícola depende diretamente da conservação ambiental para continuar existindo e prosperando. Práticas essenciais como o manejo correto do solo, o plantio direto, a preservação das fontes de água e o respeito absoluto à biodiversidade local não são apenas ações isoladas de proteção. Elas formam a base de sustentação de toda a produtividade rural moderna, provando que o desenvolvimento econômico e o cuidado com a natureza andam de mãos dadas no campo..</p>
+                </section>
+            </div>
+
+            <aside class="col-direita">
+                <section class="galeria">
+                    <h2>Galeria</h2>
+                    <div class="imagens">
+                        <figure>
+                            <img src="images/img1.jpg" alt="Plantação colorida e sustentável">
+                        </figure>
+                        <figure>
+                            <img src="images/img2.jpg" alt="Produção agrícola colorida">
+                        </figure>
+                        <figure>
+                            <img src="images/img3.jpg" alt="Campo com girassóis e energia solar">
+                        </figure>
+                    </div>
+                </section>
+            </aside>
+        </div>
+
+        <!-- Conteúdo adicional para tornar a página longa -->
+        <section class="artigos">
+            <h2>Artigos e Boas Práticas</h2>
+            <div class="cards">
+                <article class="artigo-card">
+                    <h3>Rotação de culturas</h3>
+                    <p>Explicação sobre como a rotação melhora a saúde do solo, reduz pragas e aumenta a produtividade ao longo do tempo.</p>
+                </article>
+                <article class="artigo-card">
+                    <h3>Manejo integrado de pragas</h3>
+                    <p>Combinar controle biológico, monitoramento e práticas culturais para reduzir o uso de agrotóxicos.</p>
+                </article>
+                <article class="artigo-card">
+                    <h3>Conservação de água</h3>
+                    <p>Técnicas de irrigação eficiente e captação de água da chuva para reduzir o consumo e preservar recursos.</p>
+                </article>
+                <article class="artigo-card">
+                    <h3>Solo vivo</h3>
+                    <p>Práticas que mantêm a biodiversidade do solo: compostagem, cobertura vegetal e menor revolvimento.</p>
+                </article>
             </div>
         </section>
 
-        <!-- Seção de Ações Interativas -->
-        <section class="acoes">
-            <h2>Adote Práticas Sustentáveis</h2>
-            <p>Clique nos botões abaixo para equilibrar sua produção com o meio ambiente:</p>
-            <div class="botoes-container">
-                <button id="btn-reflorestar" class="btn">Plantar Árvores Nativas</button>
-                <button id="btn-gotejamento" class="btn">Instalar Irrigação por Gotejamento</button>
-                <button id="btn-solar" class="btn">Usar Energia Solar</button>
+        <section class="recursos">
+            <h2>Recursos Úteis</h2>
+            <div class="recursos-lista">
+                <div class="recurso-item"><strong>Guia de Plantio:</strong> Calendário de semeadura por região.</div>
+                <div class="recurso-item"><strong>Checklist de Sustentabilidade:</strong> Itens para seguir em sua propriedade.</div>
+                <div class="recurso-item"><strong>Mapeamento de Solo:</strong> Como coletar e interpretar amostras.</div>
+                <div class="recurso-item"><strong>Ferramentas:</strong> Softwares e apps para monitoramento.</div>
+                <div class="recurso-item"><strong>Vídeos:</strong> Tutoriais práticos sobre irrigação e plantio direto.</div>
             </div>
         </section>
 
-        <!-- Seção Informativa Obrigatória para o Tema -->
-        <section class="sobre-tema">
-            <h2>O Equilíbrio é o Caminho</h2>
-            <p>O ecossistema agrícola depende diretamente da conservação ambiental para continuar existindo e prosperando. Práticas essenciais como o manejo correto do solo, o plantio direto, a preservação das fontes de água e o respeito absoluto à biodiversidade local não são apenas ações isoladas de proteção. Elas formam a base de sustentação de toda a produtividade rural moderna, provando que o desenvolvimento econômico e o cuidado com a natureza andam de mãos dadas no campo..</p>
+        <section class="estudos">
+            <h2>Estudos de Caso</h2>
+            <p>Veja exemplos reais de propriedades que adotaram práticas sustentáveis e melhoraram produção e biodiversidade.</p>
+            <div class="cards">
+                <article class="artigo-card">
+                    <h3>Fazenda Verde Vale</h3>
+                    <p>Redução de consumo de água em 40% após adotar irrigação por gotejamento e coberturas vegetais.</p>
+                </article>
+                <article class="artigo-card">
+                    <h3>Sítio Bom Solo</h3>
+                    <p>Recuperação de áreas degradadas com práticas agroflorestais e técnica de sucessão vegetativa.</p>
+                </article>
+            </div>
         </section>
+
+        <section class="depoimentos">
+            <h2>Depoimentos</h2>
+            <div class="depoimento">"Adotar práticas sustentáveis mudou nossa produção e trouxe qualidade de vida." — Maria, produtora.</div>
+            <div class="depoimento">"Menos custos e mais resiliência contra secas." — João, agricultor familiar.</div>
+            <div class="depoimento">"Integramos energia solar e reduzimos gastos com eletricidade." — Cooperativa Local.</div>
+        </section>
+
+        <section class="faq">
+            <h2>Perguntas Frequentes</h2>
+            <details>
+                <summary>Como começo a plantar menos agressivamente?</summary>
+                <p>Comece com pequenas áreas, testes de solo e consultoria técnica; implemente rotação e cobertura morta.</p>
+            </details>
+            <details>
+                <summary>Investimento em energia solar compensa?</summary>
+                <p>Depende do tamanho e do consumo, mas em muitas propriedades o retorno vem em poucos anos.</p>
+            </details>
+            <details>
+                <summary>Onde obter mudas nativas?</summary>
+                <p>Procure viveiros locais e programas de conservação do seu estado.</p>
+            </details>
+        </section>
+
     </main>
 
     <footer class="rodape">
